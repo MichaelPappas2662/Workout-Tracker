@@ -26,7 +26,7 @@ let db = mongoose.connect(
 
 // routes
 app.use(router);
-require("./routes/html.js")(app);
+require("./routes/html")(app);
 
 app.listen(PORT, () => {
   console.log(`App running on port ${PORT}!`);
