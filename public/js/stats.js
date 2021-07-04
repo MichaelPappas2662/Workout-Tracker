@@ -2,7 +2,7 @@ function calculateTotalWeight(data) {
   const totals = [];
 
   data.forEach((workout) => {
-    const workoutTotal = workout.exercises.reduce((total, { type, weight , reps, sets}) => {
+    const workoutTotal = workout.exercises.reduce((total, { type, duration, weight , reps, sets}) => {
       if (type === 'resistance') {
         return total + weight * reps * sets;
       }
@@ -17,6 +17,7 @@ function calculateTotalWeight(data) {
 
 function populateChart(data) {
   const durations = data.map(({ totalDuration }) => totalDuration);
+  const distance = data.map(({ totalDistance }) => totalDistance);
   const kilos = calculateTotalWeight(data);
 
   const line = document.querySelector('#canvas').getContext('2d');
@@ -46,6 +47,13 @@ function populateChart(data) {
           backgroundColor: '#071e69',
           borderColor: '#071e69',
           data: durations,
+          fill: false,
+        },
+        {
+          label: 'Distance Covered',
+          backgroundColor: '#071e69',
+          borderColor: '#071e69',
+          data: distance,
           fill: false,
         },
       ],
