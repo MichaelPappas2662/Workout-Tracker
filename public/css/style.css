@@ -16,6 +16,7 @@ body,
 
 canvas {
   background-color: white !important;
+  color: #071e69;
   border: 30px solid white !important;
   border-radius: 10px;
   margin: 20px 0px;
@@ -24,7 +25,7 @@ canvas {
 body,
 .font {
   font-family: "Roboto", sans-serif !important;
-  color: #484848;
+  color: #071e69;
 }
 
 .dash {
@@ -33,7 +34,7 @@ body,
 }
 .head-font {
   font-family: "Roboto Slab", sans-serif !important;
-  color: #484848;
+  color: #071e69;
   letter-spacing: 0.7px;
   font-size: 30px;
 }
@@ -107,15 +108,15 @@ body,
 }
 
 .positive {
-  background: #448152 !important;
+  background: #071e69 !important;
 }
 
 .blue {
-  background: #c4c4c479 !important;
+  background: #071e69 !important;
 }
 
 nav {
-  background-color: #448152;
+  background-color: #071e69;
   color: #ffffff;
   padding: 15px 50px;
   line-height: 3;
@@ -141,7 +142,7 @@ nav a {
 
 nav a:hover {
   background-color: #ffffff;
-  color: #448152;
+  color: #071e69;
 }
 
 header {
@@ -179,7 +180,7 @@ select:hover {
 select:focus {
   border-color: #aaa;
   box-shadow: 0 0 1px 3px rgba(59, 153, 252, 0.7);
-  box-shadow: 0 0 0 3px -moz-mac-focusring;
+  box-shadow: 0 0 0 3px -moz-mac-focussing;
   color: #222;
   outline: none;
 }
@@ -286,7 +287,7 @@ button {
   opacity: 1;
   right: 10px;
   background-color: hsl(94, 40%, 86%);
-  color: hsl(94, 90%, 16%);
+  color: #071e69;
   transition: all 1.2s;
 }
 
@@ -348,7 +349,7 @@ button {
 #toast.success {
   right: 10px;
   background-color: hsl(94, 40%, 86%);
-  color: hsl(94, 90%, 16%);
+  color: #071e69;
   transition: all 0.5s;
 }
 .workout-type,
@@ -406,7 +407,7 @@ button {
 
 #toast.success {
   background-color: hsl(94, 40%, 86%);
-  color: hsl(94, 90%, 16%);
+  color: #071e69;
   animation-name: toast;
   animation-duration: 2s;
   animation-fill-mode: forwards;
@@ -462,7 +463,7 @@ form > button {
 
 #toast.success {
   background-color: hsl(94, 40%, 86%);
-  color: hsl(94, 90%, 16%);
+  color: #071e69;
 }
 
 .prev-workout h3 {
