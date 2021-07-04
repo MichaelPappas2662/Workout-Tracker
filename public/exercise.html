@@ -6,8 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" />
-  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="/css/style.css" />
   <title>Fitness Tracker</title>
+  <link rel="shortcut icon" type="img/svg" href="/images/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@600;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -17,15 +21,15 @@
   </nav>
   <div class="wrapper">
     <header>
-      <h1>Fitness Tracker</h1>
+      <h1 class="head-font">Fitness Tracker</h1>
+      <p class="sub-font">Add Your Exercise</p>
     </header>
     <div class="ui container exercise">
-      <div class="ui raised card m-auto">
-        <h2>Add Your Exercise</h2>
+      <div class="ui raised card m-auto no-box">
         <form action="POST">
           <div class="workout-type">
-            <label for="type">Exercise Type:</label>
-            <select name="type" id="type">
+            <label class="label" for="type">Exercise Type</label>
+            <select class="input" name="type" id="type">
               <option disabled selected>Select Exercise Type</option>
               <option value="resistance">Resistance</option>
               <option value="cardio">Cardio</option>
@@ -33,45 +37,45 @@
           </div>
           <div class="cardio-form d-none">
             <div class="cardio-name">
-              <label for="cardio-name">Name:</label>
-              <input type="text" name="cardio-name" id="cardio-name" placeholder="Running" />
+              <label class="label" for="cardio-name">Name</label>
+              <input class="input" type="text" name="cardio-name" id="cardio-name" placeholder="Running" />
             </div>
             <div class="distance">
-              <label for="distance">Distance (km):</label>
-              <input type="number" name="distance" id="distance" placeholder="5" />
+              <label class="label" for="distance">Distance</label>
+              <input class="input" type="number" name="distance" id="distance" placeholder="5" />
             </div>
             <div class="duration">
-              <label for="duration">Duration (minutes):</label>
-              <input type="number" name="duration" id="duration" placeholder="10" />
+              <label class="label" for="duration">Duration</label>
+              <input class="input" type="number" name="duration" id="duration" placeholder="10" />
             </div>
           </div>
           <div class="resistance-form d-none">
             <div class="exercise">
-              <label for="name">Exercise Name:</label>
-              <input type="text" name="name" id="name" placeholder="Bench Press" />
+              <label class="label" for="name">Exercise Name</label>
+              <input class="input" type="text" name="name" id="name" placeholder="Bench Press" />
             </div>
             <div class="weight">
-              <label for="weight">Weight (Kg):</label>
-              <input type="number" name="weight" id="weight" placeholder="200" />
+              <label class="label" for="weight">Weight</label>
+              <input class="input" type="number" name="weight" id="weight" placeholder="200" />
             </div>
             <div class="sets">
-              <label for="sets">Sets:</label>
-              <input type="number" name="sets" id="sets" placeholder="4" />
+              <label class="label" for="sets">Sets</label>
+              <input class="input" type="number" name="sets" id="sets" placeholder="4" />
             </div>
             <div class="reps">
-              <label for="reps">Reps:</label>
-              <input type="number" name="reps" id="reps" placeholder="10" />
+              <label class="label" for="reps">Reps</label>
+              <input class="input" type="number" name="reps" id="reps" placeholder="10" />
             </div>
             <div class="resistance-duration">
-              <label for="resistance-duration">Duration (minutes):</label>
-              <input type="number" name="resistance-duration" id="resistance-duration" placeholder="10" />
+              <label class="label" for="resistance-duration">Duration</label>
+              <input class="input" type="number" name="resistance-duration" id="resistance-duration" placeholder="10" />
             </div>
           </div>
           <div class="buttons">
-            <button disabled class="huge ui blue button complete">
+            <button disabled class="huge ui blue button complete font left-button">
               Complete
             </button>
-            <button disabled class="huge ui positive button add-another">
+            <button disabled class="huge ui positive button add-another font right-button">
               Add Exercise
             </button>
           </div>
@@ -82,8 +86,8 @@
   <div id="toast">
     Workout Added Successfully!
   </div>
-  <script src="./js/api.js"></script>
-  <script src="./js/exercise.js"></script>
+  <script src="/js/api.js"></script>
+  <script src="/js/exercise.js"></script>
 </body>
 
 </html>
