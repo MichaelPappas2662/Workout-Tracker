@@ -2,9 +2,9 @@ function calculateTotalWeight(data) {
   const totals = [];
 
   data.forEach((workout) => {
-    const workoutTotal = workout.exercises.reduce((total, { type, weight }) => {
+    const workoutTotal = workout.exercises.reduce((total, { type, weight , reps, sets}) => {
       if (type === 'resistance') {
-        return total + weight;
+        return total + weight * reps * sets;
       }
       return total;
     }, 0);
@@ -17,7 +17,7 @@ function calculateTotalWeight(data) {
 
 function populateChart(data) {
   const durations = data.map(({ totalDuration }) => totalDuration);
-  const pounds = calculateTotalWeight(data);
+  const kilos = calculateTotalWeight(data);
 
   const line = document.querySelector('#canvas').getContext('2d');
   const bar = document.querySelector('#canvas2').getContext('2d');
@@ -43,8 +43,8 @@ function populateChart(data) {
       datasets: [
         {
           label: 'Workout Duration In Minutes',
-          backgroundColor: '#448152',
-          borderColor: '#448152',
+          backgroundColor: '#071e69',
+          borderColor: '#071e69',
           data: durations,
           fill: false,
         },
@@ -69,10 +69,10 @@ function populateChart(data) {
       labels,
       datasets: [
         {
-          label: 'Pounds',
-          data: pounds,
-          backgroundColor: '#448152',
-          borderColor: '#448152',
+          label: 'Kg',
+          data: kilos,
+          backgroundColor: '#071e69',
+          borderColor: '#071e69',
           borderWidth: 1,
         },
       ],
@@ -80,7 +80,7 @@ function populateChart(data) {
     options: {
       title: {
         display: true,
-        text: 'Pounds Lifted (Last 7 days)',
+        text: 'Kilos Lifted (Last 7 days)',
       },
       scales: {
         yAxes: [
