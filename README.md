@@ -44,7 +44,7 @@
 
 ## New Workout
 
-![newExercise](./public/img/addNewEX.png)
+![newExercise](./public/img/addNewEx.png)
 
 ## User Story
 
