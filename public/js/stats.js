@@ -16,6 +16,7 @@ function calculateTotalWeight(data) {
 }
 
 function populateChart(data) {
+  console.log(data)
   const durations = data.map(({ totalDuration }) => totalDuration);
   const distance = data.map(({ totalDistance }) => totalDistance);
   const kilos = calculateTotalWeight(data);

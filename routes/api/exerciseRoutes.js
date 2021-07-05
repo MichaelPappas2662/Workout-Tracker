@@ -9,11 +9,15 @@ async function getWorkouts(req, res) {
         // Total Duration algorithm
             last7.forEach((block) => {
                 const arrDuration = [];
+                console.log(block)
+                const arrDistance = [];
                 if (block.exercises[0] !== undefined) {
                     block.exercises.forEach((exercise) => {
                         arrDuration.push(exercise.duration)
+                        arrDistance.push(exercise.distance)
                     })
                     block.totalDuration = arrDuration.reduce((x, y) => x + y);
+                    block.totalDistance = arrDistance.reduce((x, y) => x + y);
                 }
             })
         res.status(200).json(last7)
