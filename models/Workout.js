@@ -23,10 +23,14 @@ const WorkoutSchema = new Schema({
                 type: Number,
                 min: 1,
             },
+            distance: {
+                type: Number,
+                min: 1,
+            },
             weight: Number,
             reps: Number,
             sets: Number,
-            distance: Number,
+            
         },
     ],
     totalDuration: {
